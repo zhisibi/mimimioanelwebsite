@@ -7,20 +7,20 @@
 <meta name="description" content="咪咪面板（Mimi Panel）是一款原生的代理内核管理面板，连接与 mihomo 兼容内核的 external-controller，查看流量、切换节点、测速、管理连接、日志和规则。支持 HarmonyOS 与 Android。">
 <link rel="icon" href="favicon.png">
 <style>
-:root{--bg:#f5f6fc;--card:#fff;--ink:#171a2b;--sub:#5d6378;--line:#e4e6f2;--a:#4f6bed;--b:#8b5cf6}
-@media(prefers-color-scheme:dark){:root{--bg:#0e1020;--card:#171a2e;--ink:#eceefb;--sub:#9da2bd;--line:#262a44}}
+:root{--bg:#fff8f1;--card:#fff;--ink:#2a1a0e;--sub:#6e5a4a;--line:#f3e3d3;--a:#c2410c;--b:#f59e0b}
+@media(prefers-color-scheme:dark){:root{--bg:#17110c;--card:#221912;--ink:#f7ede4;--sub:#c2ab98;--line:#3a2b20;--a:#fb923c}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,"HarmonyOS Sans SC","PingFang SC","Microsoft YaHei",sans-serif}
 a{color:inherit}
 .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-header.hero{background:radial-gradient(circle at 85% 10%,rgba(255,255,255,.22),transparent 40%),linear-gradient(135deg,#4f6bed 0%,#8b5cf6 100%);color:#fff;padding:72px 0 88px}
+header.hero{background:radial-gradient(circle at 85% 10%,rgba(255,255,255,.22),transparent 40%),linear-gradient(135deg,#fbbf24 0%,#f97316 55%,#ea580c 100%);color:#fff;padding:72px 0 88px}
 .hero .wrap{display:flex;align-items:center;gap:40px;flex-wrap:wrap}
-.hero img{width:132px;height:132px;border-radius:30px;box-shadow:0 18px 40px rgba(20,10,60,.35)}
+.hero img{width:132px;height:132px;border-radius:30px;box-shadow:0 18px 40px rgba(120,50,0,.35)}
 .hero h1{margin:0 0 6px;font-size:40px;letter-spacing:.02em}
 .hero h1 small{font-size:18px;font-weight:500;opacity:.8;margin-left:8px}
 .hero p{margin:0;font-size:18px;opacity:.93;max-width:580px}
 .btns{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;padding:11px 22px;border-radius:999px;font-weight:600;text-decoration:none;background:#fff;color:#4338ca}
+.btn{display:inline-block;padding:11px 22px;border-radius:999px;font-weight:600;text-decoration:none;background:#fff;color:#c2410c}
 .btn.ghost{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.45)}
 .note{margin-top:14px;font-size:13px;opacity:.85}
 section{padding:56px 0 8px}
@@ -34,7 +34,7 @@ h2{font-size:26px;margin:0 0 6px}
 .card .go{display:inline-block;margin-top:12px;color:var(--a);font-weight:600;text-decoration:none}
 .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
 .row .card p{font-size:15px}
-.tip{margin-top:18px;padding:14px 18px;border-radius:14px;background:rgba(79,107,237,.09);color:var(--sub);font-size:14.5px}
+.tip{margin-top:18px;padding:14px 18px;border-radius:14px;background:rgba(249,115,22,.10);color:var(--sub);font-size:14.5px}
 footer{margin-top:64px;border-top:1px solid var(--line);padding:28px 0 40px;color:var(--sub);font-size:14px}
 footer a{color:var(--a)}
 footer .links{display:flex;gap:8px 18px;flex-wrap:wrap;margin-bottom:10px}
@@ -51,7 +51,7 @@ footer .links span{color:var(--ink);font-weight:600}
       <a class="btn" href="#download">下载</a>
       <a class="btn ghost" href="#features">看看能做什么</a>
     </div>
-    <div class="note">支持 HarmonyOS 与 Android · 可在华为应用市场搜索“咪咪面板”</div>
+    <div class="note">支持 HarmonyOS 与 Android</div>
   </div>
 </div></header>
 
@@ -84,8 +84,8 @@ footer .links span{color:var(--ink);font-weight:600}
   <h2>下载</h2>
   <p class="lead">两个版本界面与功能保持一致。</p>
   <div class="row">
-    <div class="card"><b><i>🌸</i>HarmonyOS 版</b><p>适用于 HarmonyOS NEXT 手机、平板与折叠屏，在华为应用市场搜索“咪咪面板”安装，更新由应用市场推送。</p></div>
-    <div class="card"><b><i>🤖</i>Android 版</b><p>适用于 Android 8.0 及以上。华为手机可在华为应用市场搜索“咪咪面板”，其他手机从 GitHub 下载最新 APK。</p><a class="go" href="https://github.com/zhisibi/Clash-dashboard-cotlin/releases/latest">GitHub 下载 →</a></div>
+    <div class="card"><b><i>🌸</i>HarmonyOS 版</b><p>适用于 HarmonyOS NEXT 手机、平板与折叠屏，从华为应用市场安装，更新由应用市场推送。</p><a class="go" href="https://appgallery.huawei.com/app/detail?id=com.zhisibi.mimipanel&amp;channelId=SHARE&amp;source=appshare">华为应用市场下载 →</a></div>
+    <div class="card"><b><i>🤖</i>Android 版</b><p>适用于 Android 8.0 及以上，当前版本 <span id="av">1.2.10</span>。国内建议本站直连下载，也可以去 GitHub 下载。</p><a class="go" href="download/MimiPanel-Android-latest.apk" download>本站下载 APK →</a>　<a class="go" href="https://github.com/zhisibi/Clash-dashboard-cotlin/releases/latest">GitHub 下载 →</a></div>
   </div>
   <div class="tip">咪咪面板本身不包含代理内核，也不会启动代理或 VPN。请先在路由器、电脑或手机上的代理客户端里开启外部控制器（external-controller），再在应用里填入地址、端口和密钥。</div>
 </div></section>
