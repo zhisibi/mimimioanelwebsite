@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>咪咪面板 · 随手掌控你的代理内核</title>
+<meta name="description" content="咪咪面板（Mimi Panel）是一款原生的代理内核管理面板，连接与 mihomo 兼容内核的 external-controller，查看流量、切换节点、测速、管理连接、日志和规则。支持 HarmonyOS 与 Android。">
+<link rel="icon" href="favicon.png">
+<style>
+:root{--bg:#f5f6fc;--card:#fff;--ink:#171a2b;--sub:#5d6378;--line:#e4e6f2;--a:#4f6bed;--b:#8b5cf6}
+@media(prefers-color-scheme:dark){:root{--bg:#0e1020;--card:#171a2e;--ink:#eceefb;--sub:#9da2bd;--line:#262a44}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,"HarmonyOS Sans SC","PingFang SC","Microsoft YaHei",sans-serif}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header.hero{background:radial-gradient(circle at 85% 10%,rgba(255,255,255,.22),transparent 40%),linear-gradient(135deg,#4f6bed 0%,#8b5cf6 100%);color:#fff;padding:72px 0 88px}
+.hero .wrap{display:flex;align-items:center;gap:40px;flex-wrap:wrap}
+.hero img{width:132px;height:132px;border-radius:30px;box-shadow:0 18px 40px rgba(20,10,60,.35)}
+.hero h1{margin:0 0 6px;font-size:40px;letter-spacing:.02em}
+.hero h1 small{font-size:18px;font-weight:500;opacity:.8;margin-left:8px}
+.hero p{margin:0;font-size:18px;opacity:.93;max-width:580px}
+.btns{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 22px;border-radius:999px;font-weight:600;text-decoration:none;background:#fff;color:#4338ca}
+.btn.ghost{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.45)}
+.note{margin-top:14px;font-size:13px;opacity:.85}
+section{padding:56px 0 8px}
+h2{font-size:26px;margin:0 0 6px}
+.lead{color:var(--sub);margin:0 0 26px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 20px 16px}
+.card b{display:flex;align-items:center;gap:10px;font-size:17px;margin-bottom:6px}
+.card b i{font-style:normal;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,var(--a),var(--b));color:#fff;font-size:17px}
+.card p{margin:0;color:var(--sub);font-size:14.5px}
+.card .go{display:inline-block;margin-top:12px;color:var(--a);font-weight:600;text-decoration:none}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.row .card p{font-size:15px}
+.tip{margin-top:18px;padding:14px 18px;border-radius:14px;background:rgba(79,107,237,.09);color:var(--sub);font-size:14.5px}
+footer{margin-top:64px;border-top:1px solid var(--line);padding:28px 0 40px;color:var(--sub);font-size:14px}
+footer a{color:var(--a)}
+footer .links{display:flex;gap:8px 18px;flex-wrap:wrap;margin-bottom:10px}
+footer .links span{color:var(--ink);font-weight:600}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+  <img src="icon.png" alt="咪咪面板图标">
+  <div>
+    <h1>咪咪面板<small>Mimi Panel</small></h1>
+    <p>随手掌控你的代理内核。连接与 mihomo 兼容内核的外部控制器，看流量、切节点、测延迟、管连接，手机、平板和折叠屏都顺手。</p>
+    <div class="btns">
+      <a class="btn" href="#download">下载</a>
+      <a class="btn ghost" href="#features">看看能做什么</a>
+    </div>
+    <div class="note">支持 HarmonyOS 与 Android · 可在华为应用市场搜索“咪咪面板”</div>
+  </div>
+</div></header>
+
+<section id="features"><div class="wrap">
+  <h2>五个页面，管好整个内核</h2>
+  <p class="lead">网页面板能做的日常操作，在这里都能完成，而且更顺手。</p>
+  <div class="grid">
+    <div class="card"><b><i>📈</i>概览</b><p>实时上传/下载速度、总流量、活跃连接与内存曲线，流量最多的主机，一键切换代理模式。</p></div>
+    <div class="card"><b><i>🌐</i>代理</b><p>代理组卡片、节点选择、分组或单节点测速、延迟分级着色、排序与正则搜索，订阅流量和到期时间一目了然。</p></div>
+    <div class="card"><b><i>🔗</i>连接</b><p>活跃与已关闭连接，按来源 IP 筛选、11 种排序，单条、全部或按筛选结果断开，详情可复制。</p></div>
+    <div class="card"><b><i>📜</i>日志</b><p>实时日志，级别与类型过滤、正则搜索、暂停、正序倒序，复制或另存为文本。</p></div>
+    <div class="card"><b><i>🧭</i>规则</b><p>规则列表与命中次数，单条规则启用/禁用，规则集一键更新。</p></div>
+    <div class="card"><b><i>⚙️</i>内核设置</b><p>TUN、局域网、IPv6、端口、日志级别，重载配置、更新 GEO、清空 DNS 缓存、更新或重启内核。</p></div>
+    <div class="card"><b><i>🖥</i>多个后端</b><p>保存多台路由器或电脑上的内核，测试连接后一键切换，还能给每台起个备注名。</p></div>
+    <div class="card"><b><i>⚡</i>实时又省心</b><p>流量、内存、连接、日志通过 WebSocket 实时推送，断线自动重连；不支持的接口会明确告诉你。</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>好看，也让人放心</h2>
+  <p class="lead">原生界面，数据只在你的设备和你自己的内核之间流动。</p>
+  <div class="row">
+    <div class="card"><b><i>🎨</i>个性化</b><p>浅色、深色或跟随系统，7 种主题色，毛玻璃、沉浸光感与自定义壁纸；简体中文 / English。</p></div>
+    <div class="card"><b><i>📱</i>多设备适配</b><p>悬浮胶囊底栏可自动收起，左右滑动切换页面，下拉刷新；平板与折叠屏同样好用。</p></div>
+    <div class="card"><b><i>🔒</i>隐私优先</b><p>不含第三方 SDK，开发者不收集任何个人信息；后端地址和密钥只保存在本机。</p></div>
+  </div>
+</div></section>
+
+<section id="download"><div class="wrap">
+  <h2>下载</h2>
+  <p class="lead">两个版本界面与功能保持一致。</p>
+  <div class="row">
+    <div class="card"><b><i>🌸</i>HarmonyOS 版</b><p>适用于 HarmonyOS NEXT 手机、平板与折叠屏，在华为应用市场搜索“咪咪面板”安装，更新由应用市场推送。</p></div>
+    <div class="card"><b><i>🤖</i>Android 版</b><p>适用于 Android 8.0 及以上。华为手机可在华为应用市场搜索“咪咪面板”，其他手机从 GitHub 下载最新 APK。</p><a class="go" href="https://github.com/zhisibi/Clash-dashboard-cotlin/releases/latest">GitHub 下载 →</a></div>
+  </div>
+  <div class="tip">咪咪面板本身不包含代理内核，也不会启动代理或 VPN。请先在路由器、电脑或手机上的代理客户端里开启外部控制器（external-controller），再在应用里填入地址、端口和密钥。</div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="links"><span>HarmonyOS 版</span>
+    <a href="privacy.html">隐私政策</a><a href="agreement.html">用户协议</a>
+    <a href="privacy.en.html">Privacy Policy</a><a href="agreement.en.html">User Agreement</a>
+  </div>
+  <div class="links"><span>Android 版</span>
+    <a href="android-privacy.html">隐私政策</a><a href="android-agreement.html">用户协议</a>
+    <a href="android-privacy.en.html">Privacy Policy</a><a href="android-agreement.en.html">User Agreement</a>
+  </div>
+  <div class="links">
+    <a href="mailto:zhisibi@163.com">联系我们：zhisibi@163.com</a><span style="font-weight:400;color:var(--sub)">问题反馈 QQ 群：1127250124</span>
+  </div>
+  <div>本应用为第三方管理面板，与 mihomo 等代理内核项目及其作者没有隶属或合作关系，不提供任何代理服务器、节点或订阅内容。</div>
+  <div>© 2026 张世博</div>
+</div></footer>
+</body>
+</html>
